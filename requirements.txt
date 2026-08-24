@@ -10,6 +10,7 @@ Pillow
 nbformat
 nbclient
 ipykernel
+ipywidgets
 jupyterlab
 
 # Deep Learning y visión
