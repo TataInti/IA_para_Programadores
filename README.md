@@ -24,6 +24,31 @@ Cada clase sigue la misma secuencia: pregunta central, idea principal, glosario,
 explicación visual, experimento guiado, preguntas de interpretación, actividad
 de unos veinte minutos, síntesis y puente explícito al track correspondiente.
 
+## Curso 2 — Track Salud: PLN, LLMs y ML Predictivo
+
+Módulo especializado para desarrolladores asignados al Track Salud. Profundiza
+las capacidades de IA aplicadas a consultorios: asistentes conversacionales,
+predicción de necesidades de atención y automatización de procesos
+administrativos de bajo riesgo.
+
+### Clases
+
+| # | Notebook | Práctica principal | Prepara para |
+|---:|---|---|---|
+| 1 | `modulo_2/01_audio_espectrogramas_y_features.ipynb` | Audio digital, espectrograma y features acústicas | ASR y análisis de llamadas |
+| 2 | `modulo_2/02_asr_whisper_y_tts.ipynb` | Whisper (ASR) y MMS-TTS: pipeline voz→texto→voz | Asistentes conversacionales |
+| 3 | *(en desarrollo)* NLP clínico: tokenización y entidades | Texto transcrito → datos estructurados | NLP clínico |
+| 4 | *(en desarrollo)* Funcionamiento interno de LLMs | Atención, tokens y contexto | Prompting avanzado |
+| 5 | *(en desarrollo)* Prompting avanzado y JSON | Few-shot, chain-of-thought, salidas estructuradas | Automatización administrativa |
+| 6 | *(en desarrollo)* Sistemas RAG | Embeddings, vector stores y reranking | Consulta de manuales e historias |
+| 7 | *(en desarrollo)* Agentes y function calling | LLM como orquestador de herramientas y SQL | Agentes conectados a datos |
+| 8 | *(en desarrollo)* ML predictivo en salud | Clasificación/regresión y feature engineering clínico | Predicción de riesgo |
+
+Cada clase sigue la misma secuencia que el Curso 1: pregunta central, idea
+principal, glosario, explicación visual, experimento guiado, preguntas de
+interpretación, actividad de unos veinte minutos, síntesis y puente explícito
+al track.
+
 ## Alcance de esta nivelación
 
 Todos los conceptos importantes de los módulos siguientes aparecen al menos una
@@ -68,6 +93,12 @@ descargar:
 - `all-MiniLM-L6-v2` para embeddings de texto;
 - Qwen 2.5 Instruct 0.5B Q4 en GGUF para generación local
   (aproximadamente 500 MB).
+
+El **Curso 2 (Track Salud)** agrega:
+
+- Whisper Tiny para ASR (reutilizado del Curso 1);
+- `facebook/mms-tts-spa` para síntesis de voz en español
+  (aproximadamente 100 MB).
 
 Los modelos quedan en las caches habituales de PyTorch, Hugging Face y
 Ultralytics.
