@@ -22,7 +22,8 @@ algoritmos, ciclos de entrenamiento, transformers, detectores ni RAG desde cero.
 
 Cada clase sigue la misma secuencia: pregunta central, idea principal, glosario,
 explicación visual, experimento guiado, preguntas de interpretación, actividad
-de unos veinte minutos, síntesis y puente explícito al track correspondiente.
+aplicada de veinte a treinta minutos, síntesis y puente explícito al track
+correspondiente.
 
 ## Curso 2 — Track Salud: PLN, LLMs y ML Predictivo
 
@@ -46,8 +47,8 @@ administrativos de bajo riesgo.
 
 Cada clase sigue la misma secuencia que el Curso 1: pregunta central, idea
 principal, glosario, explicación visual, experimento guiado, preguntas de
-interpretación, actividad de unos veinte minutos, síntesis y puente explícito
-al track.
+interpretación, actividad aplicada de veinte a treinta minutos, síntesis y
+puente explícito al track.
 
 ## Alcance de esta nivelación
 
