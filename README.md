@@ -38,7 +38,7 @@ administrativos de bajo riesgo.
 |---:|---|---|---|
 | 1 | `modulo_2/01_audio_espectrogramas_y_features.ipynb` | Audio digital, espectrograma y features acústicas | ASR y análisis de llamadas |
 | 2 | `modulo_2/02_asr_whisper_y_tts.ipynb` | Whisper (ASR) y MMS-TTS: pipeline voz→texto→voz | Asistentes conversacionales |
-| 3 | *(en desarrollo)* NLP clínico: tokenización y entidades | Texto transcrito → datos estructurados | NLP clínico |
+| 3 | `modulo_2/03_nlp_clinico_tokenizacion_clasificacion_entidades.ipynb` | Conceptos de tokenización y embeddings; métodos simples de clasificación y extracción de entidades | Texto transcrito → datos estructurados y revisión humana |
 | 4 | *(en desarrollo)* Funcionamiento interno de LLMs | Atención, tokens y contexto | Prompting avanzado |
 | 5 | *(en desarrollo)* Prompting avanzado y JSON | Few-shot, chain-of-thought, salidas estructuradas | Automatización administrativa |
 | 6 | *(en desarrollo)* Sistemas RAG | Embeddings, vector stores y reranking | Consulta de manuales e historias |
