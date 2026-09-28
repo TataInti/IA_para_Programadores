@@ -40,8 +40,8 @@ administrativos de bajo riesgo.
 | 2 | `modulo_2/02_asr_whisper_y_tts.ipynb` | Whisper (ASR) y MMS-TTS: pipeline voz→texto→voz | Asistentes conversacionales |
 | 3 | `modulo_2/03_nlp_clinico_tokenizacion_clasificacion_entidades.ipynb` | Conceptos de tokenización y embeddings; métodos simples de clasificación y extracción de entidades | Texto transcrito → datos estructurados y revisión humana |
 | 4 | *(en desarrollo)* Funcionamiento interno de LLMs | Atención, tokens y contexto | Prompting avanzado |
-| 5 | *(en desarrollo)* Prompting avanzado y JSON | Few-shot, chain-of-thought, salidas estructuradas | Automatización administrativa |
-| 6 | *(en desarrollo)* Sistemas RAG | Embeddings, vector stores y reranking | Consulta de manuales e historias |
+| 5 | `modulo_2/05_prompting_avanzado_y_json.ipynb` | Few-shot, razonamiento verificable y salidas JSON | Automatización administrativa |
+| 6 | `modulo_2/06_sistemas_rag.ipynb` | Embeddings, búsqueda y reranking sobre un corpus ficticio | Consulta de manuales e historias |
 | 7 | *(en desarrollo)* Agentes y function calling | LLM como orquestador de herramientas y SQL | Agentes conectados a datos |
 | 8 | *(en desarrollo)* ML predictivo en salud | Clasificación/regresión y feature engineering clínico | Predicción de riesgo |
 
@@ -85,8 +85,11 @@ una computadora de desarrollo actual.
 
 ## Modelos y descargas
 
-No se necesitan APIs, claves ni servicios pagos. La primera ejecución puede
-descargar:
+Las clases 1 a 4 no necesitan APIs. La Clase 5 agrega OpenRouter como proveedor
+opcional para practicar prompting con un modelo remoto; requiere una cuenta y
+una variable de entorno `OPENROUTER_API_KEY`. También incluye un modo demo sin
+clave. La Clase 6 trabaja con un corpus local ficticio y no necesita servicios
+pagos ni APIs adicionales. La primera ejecución puede descargar:
 
 - ResNet18 para embeddings y clasificación visual;
 - YOLO nano para la demostración de detección;
