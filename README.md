@@ -42,8 +42,8 @@ administrativos de bajo riesgo.
 | 4 | *(en desarrollo)* Funcionamiento interno de LLMs | Atención, tokens y contexto | Prompting avanzado |
 | 5 | `modulo_2/05_prompting_avanzado_y_json.ipynb` | Few-shot, razonamiento verificable y salidas JSON | Automatización administrativa |
 | 6 | `modulo_2/06_sistemas_rag.ipynb` | Embeddings, búsqueda y reranking sobre un corpus ficticio | Consulta de manuales e historias |
-| 7 | *(en desarrollo)* Agentes y function calling | LLM como orquestador de herramientas y SQL | Agentes conectados a datos |
-| 8 | *(en desarrollo)* ML predictivo en salud | Clasificación/regresión y feature engineering clínico | Predicción de riesgo |
+| 7 | `modulo_2/07_agentes_y_function_calling.ipynb` | Agentes, function calling y consultas SQL a una base SQLite | Agentes conectados a datos |
+| 8 | `modulo_2/08_ml_predictivo_salud.ipynb` | Clasificación/regresión y feature engineering clínico | Predicción de riesgo |
 
 Cada clase sigue la misma secuencia que el Curso 1: pregunta central, idea
 principal, glosario, explicación visual, experimento guiado, preguntas de
