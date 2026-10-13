@@ -1,4 +1,6 @@
-# Curso 1 — Fundamentos comunes de IA para programadores
+# IA para Programadores
+
+## Curso 1 — Fundamentos comunes de IA para programadores
 
 Módulo de nivelación para desarrolladores senior con experiencia de IA mínima o
 despareja. Introduce el lenguaje, los criterios y las herramientas que los
@@ -7,7 +9,7 @@ cursos especializados de **Salud** e **Imagen** desarrollan en profundidad.
 La prioridad es experimentar y explicar lo observado. No se pide implementar
 algoritmos, ciclos de entrenamiento, transformers, detectores ni RAG desde cero.
 
-## Clases
+### Clases
 
 | # | Notebook | Práctica principal | Prepara para |
 |---:|---|---|---|
@@ -15,15 +17,72 @@ algoritmos, ciclos de entrenamiento, transformers, detectores ni RAG desde cero.
 | 2 | `02_machine_learning_algoritmos_y_evaluacion.ipynb` | Clasificación, regresión, splits y métricas | ML predictivo y evaluación |
 | 3 | `03_datos_multimodales_y_embeddings.ipynb` | Texto, imagen, audio y ráster como representaciones | NLP, RAG, visión y multibanda |
 | 4 | `04_redes_neuronales_y_frameworks.ipynb` | La misma MLP con PyTorch y Keras | Deep Learning de ambos tracks |
-| 5 | `05_vision_clasificacion_deteccion_segmentacion.ipynb` | ResNet, YOLO nano, augmentation e IoU | Track Imagen: clases 1–2 |
+| 5 | `05_vision_clasificacion_deteccion_segmentacion.ipynb` | ResNet, YOLO nano, augmentation e IoU | Track Imagen: segmentación y evaluación |
 | 6 | `06_audio_nlp_y_transformers.ipynb` | WAV, espectrograma, Whisper, attention y KV cache | Track Salud: clases 1–4 |
 | 7 | `07_prompting_rag_y_agentes.ipynb` | Mini-RAG local, JSON y herramienta simulada | Track Salud: clases 5–7 |
-| 8 | `08_datos_geoespaciales_y_pipeline.ipynb` | GeoTIFF, GeoJSON, NDVI y máscara de parcela | Track Imagen: clases 3–8 |
+| 8 | `08_datos_geoespaciales_y_pipeline.ipynb` | GeoTIFF, GeoJSON, NDVI y máscara de parcela | Track Imagen: GIS e índices espectrales |
 
 Cada clase sigue la misma secuencia: pregunta central, idea principal, glosario,
 explicación visual, experimento guiado, preguntas de interpretación, actividad
 aplicada de veinte a treinta minutos, síntesis y puente explícito al track
 correspondiente.
+
+### Alcance de la nivelación
+
+Todos los conceptos importantes de los módulos siguientes aparecen al menos una
+vez, pero con datos controlados y modelos pequeños o preentrenados.
+
+- El **Track Salud** profundizará ASR/TTS, NLP clínico, prompting avanzado,
+  vector stores, reranking, agentes conectados a SQL y feature engineering
+  clínico.
+- El **Track Imagen** aplica esta base al análisis de imágenes de dron y
+  satélite, datos GIS, índices espectrales y segmentación. U-Net, Mask R-CNN,
+  SAM y las plataformas satelitales se estudian con profundidad introductoria.
+- Este curso no busca autonomía técnica en cada especialidad: busca que los
+  alumnos puedan reconocer cada componente, leer un pipeline y formular buenas
+  preguntas antes de especializarse.
+
+
+### Preparación
+
+Se requiere Python 3.12. Desde esta carpeta:
+
+```bash
+python3.12 -m venv .venv
+# source .venv/bin/activate        # macOS / Linux
+.venv\Scripts\activate         # Windows
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+jupyter lab
+```
+
+Los notebooks están pensados para CPU y definen `FAST_MODE = True`. Después de
+preparar modelos, cada uno debe completar `Run All` en menos de cinco minutos en
+una computadora de desarrollo actual.
+
+### Modelos y descargas de los Cursos 1 y 2
+
+Las clases 1 a 4 no necesitan APIs. La Clase 5 agrega OpenRouter como proveedor
+opcional para practicar prompting con un modelo remoto; requiere una cuenta y
+una variable de entorno `OPENROUTER_API_KEY`. También incluye un modo demo sin
+clave. La Clase 6 trabaja con un corpus local ficticio y no necesita servicios
+pagos ni APIs adicionales. La primera ejecución puede descargar:
+
+- ResNet18 para embeddings y clasificación visual;
+- YOLO nano para la demostración de detección;
+- Whisper Tiny para ASR;
+- `all-MiniLM-L6-v2` para embeddings de texto;
+- Qwen 2.5 Instruct 0.5B Q4 en GGUF para generación local
+  (aproximadamente 500 MB).
+
+El **Curso 2 (Track Salud)** agrega:
+
+- Whisper Tiny para ASR (reutilizado del Curso 1);
+- `facebook/mms-tts-spa` para síntesis de voz en español
+  (aproximadamente 100 MB).
+
+Los modelos quedan en las caches habituales de PyTorch, Hugging Face y
+Ultralytics.
 
 ## Curso 2 — Track Salud: PLN, LLMs y ML Predictivo
 
@@ -50,62 +109,30 @@ principal, glosario, explicación visual, experimento guiado, preguntas de
 interpretación, actividad aplicada de veinte a treinta minutos, síntesis y
 puente explícito al track.
 
-## Alcance de esta nivelación
+## Curso 3 — Track Imagen: segmentación, GIS y datos geoespaciales
 
-Todos los conceptos importantes de los módulos siguientes aparecen al menos una
-vez, pero con datos controlados y modelos pequeños o preentrenados.
+Ocho clases de dos horas orientadas a comprender imágenes aéreas y convertirlas
+en información útil para proyectos agropecuarios. El caso conductor es un vuelo
+de dron sobre un lote real de Mendoza. Cada clase parte de una pregunta concreta,
+explica los conceptos necesarios y propone una observación o práctica breve.
 
-- El **Track Salud** profundizará ASR/TTS, NLP clínico, prompting avanzado,
-  vector stores, reranking, agentes conectados a SQL y feature engineering
-  clínico.
-- El **Track Imagen** profundizará entrenamiento de detectores, U-Net,
-  Mask R-CNN, SAM, mAP sobre datasets, reproyecciones, ortomosaicos,
-  Earth Engine/Sentinel Hub y pipelines agro productivos.
-- Este curso no busca autonomía técnica en cada especialidad: busca que los
-  alumnos puedan reconocer cada componente, leer un pipeline y formular buenas
-  preguntas antes de especializarse.
+El [temario del Módulo 3](modulo_3/temario.md) define el contenido de cada clase,
+las librerías de Python que se introducen y los recursos visuales disponibles.
+Las arquitecturas y plataformas avanzadas se presentan a nivel general para
+entender cuándo sirven y qué límites tienen.
 
+### Clases
 
-## Preparación
-
-Se requiere Python 3.12. Desde esta carpeta:
-
-```bash
-python3.12 -m venv .venv
-# source .venv/bin/activate        # macOS / Linux
-.venv\Scripts\activate         # Windows
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-jupyter lab
-```
-
-Los notebooks están pensados para CPU y definen `FAST_MODE = True`. Después de
-preparar modelos, cada uno debe completar `Run All` en menos de cinco minutos en
-una computadora de desarrollo actual.
-
-## Modelos y descargas
-
-Las clases 1 a 4 no necesitan APIs. La Clase 5 agrega OpenRouter como proveedor
-opcional para practicar prompting con un modelo remoto; requiere una cuenta y
-una variable de entorno `OPENROUTER_API_KEY`. También incluye un modo demo sin
-clave. La Clase 6 trabaja con un corpus local ficticio y no necesita servicios
-pagos ni APIs adicionales. La primera ejecución puede descargar:
-
-- ResNet18 para embeddings y clasificación visual;
-- YOLO nano para la demostración de detección;
-- Whisper Tiny para ASR;
-- `all-MiniLM-L6-v2` para embeddings de texto;
-- Qwen 2.5 Instruct 0.5B Q4 en GGUF para generación local
-  (aproximadamente 500 MB).
-
-El **Curso 2 (Track Salud)** agrega:
-
-- Whisper Tiny para ASR (reutilizado del Curso 1);
-- `facebook/mms-tts-spa` para síntesis de voz en español
-  (aproximadamente 100 MB).
-
-Los modelos quedan en las caches habituales de PyTorch, Hugging Face y
-Ultralytics.
+| # | Tema | Aplicación principal |
+|---:|---|---|
+| 1 | Imágenes de dron y satélite | Píxel, cobertura, reflectancia, bandas y ortomosaicos; observación del vuelo de Mendoza. |
+| 2 | Datos GIS en Python | Ráster, vectores, coordenadas y capas con Rasterio y GeoPandas. |
+| 3 | Índices espectrales | Interpretación de NDVI y NDWI a partir de bandas y datos preparados. |
+| 4 | Segmentación semántica y por instancia | Máscaras, etiquetas y panorama de U-Net y Mask R-CNN. |
+| 5 | SAM y evaluación | Propuestas de máscaras, errores, IoU, F1 por clase y mAP. |
+| 6 | Google Earth Engine y Sentinel Hub | Consulta de imágenes satelitales y comparación de escala con el dron. |
+| 7 | Integración con bases de datos y GIS | Ubicación y revisión de resultados sobre capas del lote. |
+| 8 | Flujo completo aplicado al agro | De la captura y el análisis a un mapa o reporte revisable. |
 
 ## Assets locales
 
@@ -115,5 +142,7 @@ Ultralytics.
   bandas azul, verde, roja y NIR en `EPSG:32720`.
 - `assets/geospatial/parcela.geojson`: parcela sintética dentro de la escena,
   con el mismo CRS.
+- `assets/geospatial/DCIM/`: imágenes de un vuelo de dron sobre un lote real
+  de Mendoza, con fotos visibles y bandas espectrales separadas.
 - `assets/images/`: imágenes pequeñas para ResNet/YOLO, con procedencia,
   atribución y términos documentados en `assets/images/README.md`.
