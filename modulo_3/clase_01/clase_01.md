@@ -6,7 +6,7 @@ Una imagen aérea parece una vista directa del terreno. En realidad, es el resul
 
 La teledetección permite obtener información de una superficie sin medirla por contacto directo. En una captura habitual, la energía del Sol atraviesa la atmósfera, llega al suelo y a la vegetación, y una parte vuelve hacia el sensor. El sensor registra esa señal y la transforma en datos.
 
-![Recorrido de la energía desde el Sol hasta el sensor y la interpretación de la imagen](media/clase_01/sistema_teledeteccion.png)
+![Recorrido de la energía desde el Sol hasta el sensor y la interpretación de la imagen](../../media/clase_01/sistema_teledeteccion.png)
 
 La superficie puede reflejar, absorber o transmitir la energía en distintas proporciones. La atmósfera también puede modificar la señal. Por eso, la imagen no es una copia de la realidad: es una medición tomada desde una posición, en un momento y con un sensor determinados. Para entenderla, necesitamos saber qué señal registró ese sensor y bajo qué condiciones.
 
@@ -14,7 +14,7 @@ La superficie puede reflejar, absorber o transmitir la energía en distintas pro
 
 La señal medida se organiza en una cuadrícula de filas y columnas. Cada celda es un píxel y contiene un valor que representa la medición en esa parte de la escena. Si en una celda coinciden suelo y vegetación, el píxel puede combinar la señal de ambos.
 
-![Una escena representada como cuadrícula de píxeles y como capas de valores](media/clase_01/matriz_pixel_bandas.png)
+![Una escena representada como cuadrícula de píxeles y como capas de valores](../../media/clase_01/matriz_pixel_bandas.png)
 
 Una fotografía RGB contiene tres canales: rojo, verde y azul. En cada posición hay un valor para cada canal; al combinarlos en una pantalla vemos un color. Otros sensores registran más canales, asociados a diferentes rangos de energía. Cada canal forma una capa de valores sobre la misma cuadrícula.
 
@@ -24,9 +24,9 @@ El píxel es una unidad de la imagen digital. Su tamaño en la pantalla no indic
 
 El ojo humano percibe una parte pequeña de la radiación electromagnética: la luz visible. Los sensores pueden registrar también energía fuera de ese rango, como el infrarrojo cercano, el infrarrojo de onda corta, la radiación térmica o las microondas.
 
-![Espectro electromagnético con la franja de luz visible](media/clase_01/espectro_electromagnetico.png)
+![Espectro electromagnético con la franja de luz visible](../../media/clase_01/espectro_electromagnetico.png)
 
-![Rangos espectrales y ejemplos generales de observación](media/clase_01/rangos_espectrales.png)
+![Rangos espectrales y ejemplos generales de observación](../../media/clase_01/rangos_espectrales.png)
 
 Los distintos rangos se relacionan con la longitud de onda. No hace falta memorizar sus valores para comprender la idea: una cámara común registra la luz visible, mientras que otros sensores pueden medir energía que no vemos directamente. Esa información puede ayudar a distinguir superficies que parecen similares en una fotografía común.
 
@@ -36,7 +36,7 @@ Una superficie no responde igual en todos los rangos. Dos materiales que se ven 
 
 Una banda es un intervalo de longitudes de onda que el sensor registra en un canal. Cada banda produce una capa de valores. Una cámara RGB registra tres bandas amplias del visible; un sensor multibanda puede sumar bandas de otras regiones; uno hiperespectral separa la energía en muchos intervalos más estrechos.
 
-![Bandas espectrales amplias y estrechas registradas por distintos sensores](media/clase_01/resolucion_espectral.png)
+![Bandas espectrales amplias y estrechas registradas por distintos sensores](../../media/clase_01/resolucion_espectral.png)
 
 La resolución espectral describe cuánto detalle tiene un sensor al separar esos intervalos. Una banda amplia reúne señales de una porción mayor del espectro; varias bandas estrechas permiten observar diferencias dentro de esa porción. Esto puede aportar información adicional, pero no asigna automáticamente una categoría a cada píxel. Una banda no significa por sí sola “suelo”, “cultivo” o “maleza”: para interpretar los valores se necesita conocer qué mide cada canal, cómo se obtuvo la imagen y qué ocurre en el terreno.
 
@@ -46,9 +46,9 @@ Cada banda aporta valores para las mismas celdas. También importa cuánto terre
 
 La resolución espacial expresa el nivel de detalle espacial de una imagen. Una forma sencilla de entenderla es preguntar qué superficie representa cada píxel. Si una celda cubre un área grande, los objetos pequeños quedan mezclados. Si cubre un área menor, pueden distinguirse detalles más finos, siempre que la captura y la calidad de la imagen lo permitan.
 
-![Comparación entre áreas amplias y áreas menores observadas con distinta resolución espacial](media/clase_01/resolucion_espacial_extension.png)
+![Comparación entre áreas amplias y áreas menores observadas con distinta resolución espacial](../../media/clase_01/resolucion_espacial_extension.png)
 
-![Una misma escena representada con tamaños de píxel diferentes](media/clase_01/detalle_por_resolucion.png)
+![Una misma escena representada con tamaños de píxel diferentes](../../media/clase_01/detalle_por_resolucion.png)
 
 Las imágenes muestran cómo cambia la lectura al variar la escala: con una vista general se reconocen patrones amplios; con más detalle se distinguen elementos más pequeños. La cantidad de píxeles del archivo, por sí sola, no permite saber cuál de esas escalas representa.
 
@@ -64,7 +64,7 @@ Una imagen puede tener millones de píxeles y cubrir una superficie extensa o pe
 
 En esta fotografía RGB se observan patrones de parcelas, variaciones de color y textura y una vista amplia del terreno.
 
-<img src="../assets/geospatial/DCIM/DJI_202511151449_001_ellauquen-Lote1/DJI_20251115145153_0001_D.JPG" alt="Fotografía aérea RGB del lote, con parcelas y variaciones de cobertura" width="900">
+<img src="../../assets/geospatial/DCIM/DJI_202511151449_001_ellauquen-Lote1/DJI_20251115145153_0001_D.JPG" alt="Fotografía aérea RGB del lote, con parcelas y variaciones de cobertura" width="900">
 
 Los valores rojo, verde y azul de cada píxel también pueden observarse por separado. El [notebook de canales RGB](clase_01_demo_rgb.ipynb) conecta la matriz con un píxel concreto, muestra cada canal y prueba una máscara gruesa para comparar hileras con el camino.
 
@@ -76,7 +76,7 @@ La vegetación que aparece en una imagen no queda identificada automáticamente 
 
 En una composición RGB de color natural, las bandas roja, verde y azul se muestran en los canales de pantalla correspondientes. En una composición de falso color, una o más bandas se asignan a canales distintos. Por ejemplo, el infrarrojo cercano puede mostrarse en rojo.
 
-![Bandas de una imagen asignadas a los canales de color para formar composiciones naturales y de falso color](media/clase_01/composiciones_color.png)
+![Bandas de una imagen asignadas a los canales de color para formar composiciones naturales y de falso color](../../media/clase_01/composiciones_color.png)
 
 El falso color depende de esa asignación: la composición representa las mediciones del sensor con otros colores en pantalla. En una composición frecuente, la vegetación aparece roja porque refleja energía en el infrarrojo cercano. Ese color no demuestra por sí solo salud, especie ni presencia de malezas. Para interpretar una composición hacen falta conocer sus bandas, la forma en que se asignaron y las condiciones del terreno.
 
@@ -112,7 +112,7 @@ La fotografía RGB tiene cuatro TIFF asociados. Todos comparten el prefijo `DJI_
 
 **El JPG no contiene infrarrojo: esa medición está en un TIFF separado.** Cada TIFF contiene una banda, almacenada con 16 bits por muestra. Eso permite representar hasta 65.536 niveles digitales posibles, pero no significa que los valores sean reflectancia calibrada.
 
-![Fotografía RGB y cuatro bandas de la captura real 0001, mostradas por separado](media/clase_01/captura_0001_rgb_multiespectral.png)
+![Fotografía RGB y cuatro bandas de la captura real 0001, mostradas por separado](../../media/clase_01/captura_0001_rgb_multiespectral.png)
 
 En los TIFF, los tonos oscuros representan valores digitales menores y los claros, mayores. Se ajustó el contraste de cada panel por separado para mostrar detalles. Por eso no podemos comparar su brillo como si fuera una comparación de reflectancia. La figura tampoco aplica alineación entre cámaras.
 

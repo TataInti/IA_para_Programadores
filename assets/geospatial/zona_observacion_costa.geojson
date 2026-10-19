@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "zona_observacion_costa",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "nombre": "Zona de observación didáctica", "nota": "Polígono dibujado para la clase; no es un límite oficial ni catastral" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 4.368087323206556, 52.237446299811388 ], [ 4.448487784391045, 52.232890430934731 ], [ 4.438281776188086, 52.188957692934878 ], [ 4.360966833090132, 52.196168842151572 ], [ 4.368087323206556, 52.237446299811388 ] ] ] } }
+]
+}
