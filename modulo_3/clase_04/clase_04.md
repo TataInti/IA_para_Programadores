@@ -4,6 +4,63 @@ En la clase 3 aprendimos a combinar bandas para obtener una **señal** de vegeta
 
 Hoy damos el paso siguiente: **pintar el lote**. Cada píxel recibe una etiqueta: suelo, cultivo o maleza. Ese mapa pintado se llama **máscara**. Y a la tarea de producirlo se la llama **segmentación**.
 
+En el procesamiento de datos geoespaciales y vegetación, U-Net es el estándar para la segmentación semántica, mientras que Mask R-CNN es el referente clásico para la segmentación de instancias.
+
+A continuación, se detalla cómo funciona cada arquitectura y cómo se aplican específicamente al análisis de coberturas vegetales y agrícolas.
+
+### U-Net (Segmentación Semántica)
+
+Diseñada originalmente para imágenes biomédicas, su estructura en forma de "U" la hace extraordinariamente eficiente para clasificar terrenos píxel a píxel a partir de imágenes satelitales o de drones.
+Estructura Conceptual de U-Net:
+
+```text
+Camino de Contracción (Encoder)             Camino de Expansión (Decoder)
+[Imagen] -> Conv -> MaxPool \               / ConvTransposed -> [Máscara]
+                             \ Conexiones  /
+                              \ Directas  /
+                               \  (Skip) /
+                                \       /
+                                 [Latent]
+```
+
+Aplicación en Vegetación:
+
+- Mapeo continuo de cobertura del suelo (identificar qué píxeles son bosque denso, pastizal, suelo desnudo o agua).
+- Procesamiento de imágenes multiespectrales (Sentinel-2 o Landsat) para segmentar zonas afectadas por deforestación o incendios.
+- Delimitación de parcelas agrícolas completas sin importar cuántas plantas individuales contenga cada una.
+
+
+### Mask R-CNN (Segmentación de Instancias)
+
+Es una extensión de Faster R-CNN desarrollada por el equipo de investigadores de Meta (FAIR). No solo encuentra objetos en la imagen, sino que genera una máscara perfecta para cada uno de ellos de forma independiente.
+
+Estructura Conceptual de Mask R-CNN:
+
+```
+               /--> Rama de Clasificación (¿Qué es?) y Bounding Box (¿Dónde está?)
+[Imagen] -> Backbone -> RPN 
+               \--> Rama de Máscara (Segmentación píxel a píxel de la instancia)
+```
+
+Aplicación en Vegetación:
+
+- Conteo e inventariado de árboles: Aislar y vectorizar cada copa de árbol individual en áreas urbanas o plantaciones comerciales.
+- Conteo de frutos/cultivos de alto valor: Detectar y segmentar de manera individual piñas, manzanas o plantas de vid para estimar rendimientos por hectárea.
+- Detección de árboles muertos o enfermos: Aislar un espécimen específico que muestra estrés hídrico o plagas para guiar un tratamiento focalizado con drones.
+
+Comparativa de Rendimiento en Proyectos SIG / GeoAI
+
+
+## Comparación rápida: U-Net vs Mask R-CNN
+
+| Criterio | U-Net | Mask R-CNN |
+|---|---|---|
+| Complejidad del Dataset | Más simple de etiquetar (solo pintas las zonas de vegetación). | Más laborioso (cada árbol debe tener su propia etiqueta/ID independiente). |
+| Cómputo Requerido | Moderado. Ideal para grandes extensiones satelitales. | Alto. Requiere GPUs potentes debido a la detección por regiones. |
+| Manejo de Solapamientos | Malo. Si las copas de dos árboles se tocan, las unirá en un solo polígono. | Bueno. Puede entender que son dos árboles distintos aunque sus copas se crucen. |
+| Formato de Salida Común | Raster (GeoTIFF con códigos de clase). | Vectorial (GeoJSON o Shapefile con geometrías individuales). |
+
+
 La [práctica visual](clase_04_demo_segmentacion.ipynb) trabaja siempre sobre una imagen real de maíz con malezas (WeedsGalore). Vas a comparar tres formas de pintar: **una regla por color, una agrupación automática (K-Means) y una etiqueta hecha por personas**. Cada una responde una pregunta distinta; solo la última sabe qué es maleza en ese lote.
 
 ## Primero, ¿qué pregunta queremos responder?
