@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 650" role="img" aria-labelledby="title desc">
+  <title id="title">Cuatro herramientas para trabajar con imágenes satelitales</title>
+  <desc id="desc">Una pregunta de campo y sus parámetros de lugar, fecha y colección se pueden resolver con cuatro tipos de herramienta: catálogo STAC, navegador visual, análisis en la nube o servicio API para una aplicación.</desc>
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+      .ink { fill: #17242e; }
+      .muted { fill: #52616c; }
+      .card { fill: #ffffff; stroke: #d6dee4; stroke-width: 2; }
+      .small { font-size: 18px; }
+      .body { font-size: 20px; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 Z" fill="#72818b"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="650" rx="28" fill="#f4f7f8"/>
+  <text x="640" y="55" text-anchor="middle" class="sans ink" font-size="32" font-weight="700">Una pregunta, cuatro tipos de ayuda</text>
+  <rect x="250" y="82" width="780" height="83" rx="16" fill="#e7eef2" stroke="#c8d4db" stroke-width="2"/>
+  <text x="640" y="116" text-anchor="middle" class="sans ink" font-size="22" font-weight="700">Pregunta del campo</text>
+  <text x="640" y="145" text-anchor="middle" class="sans muted" font-size="19">¿Qué cambió en la cobertura de este lote entre dos momentos?</text>
+  <path d="M640 165 V190 M145 190 H1135 M145 190 V216 M475 190 V216 M805 190 V216 M1135 190 V216" fill="none" stroke="#72818b" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g class="sans">
+    <rect x="25" y="220" width="240" height="300" rx="18" class="card"/>
+    <rect x="25" y="220" width="240" height="13" rx="7" fill="#176b83"/>
+    <text x="48" y="270" fill="#176b83" font-size="16" font-weight="700" letter-spacing="1">CATÁLOGO · STAC</text>
+    <text x="48" y="310" class="ink" font-size="24" font-weight="700">Earth Search</text>
+    <text x="48" y="355" class="muted body"><tspan x="48" dy="0">Encuentra qué</tspan><tspan x="48" dy="28">escenas existen.</tspan></text>
+    <line x1="48" y1="415" x2="242" y2="415" stroke="#e0e6ea" stroke-width="2"/>
+    <text x="48" y="449" class="ink small" font-weight="700">Devuelve</text>
+    <text x="48" y="479" class="muted small"><tspan x="48" dy="0">ítems, metadatos</tspan><tspan x="48" dy="25">y enlaces a archivos</tspan></text>
+
+    <rect x="355" y="220" width="240" height="300" rx="18" class="card"/>
+    <rect x="355" y="220" width="240" height="13" rx="7" fill="#a34b2d"/>
+    <text x="378" y="270" fill="#a34b2d" font-size="16" font-weight="700" letter-spacing="1">EXPLORAR · VISUAL</text>
+    <text x="378" y="310" class="ink" font-size="21" font-weight="700">Copernicus Browser</text>
+    <text x="378" y="355" class="muted body"><tspan x="378" dy="0">Busca, muestra</tspan><tspan x="378" dy="28">y compara escenas.</tspan></text>
+    <line x1="378" y1="415" x2="572" y2="415" stroke="#e0e6ea" stroke-width="2"/>
+    <text x="378" y="449" class="ink small" font-weight="700">Ayuda a elegir</text>
+    <text x="378" y="479" class="muted small"><tspan x="378" dy="0">una escena para</tspan><tspan x="378" dy="25">inspeccionar</tspan></text>
+
+    <rect x="685" y="220" width="240" height="300" rx="18" class="card"/>
+    <rect x="685" y="220" width="240" height="13" rx="7" fill="#28744c"/>
+    <text x="708" y="270" fill="#28744c" font-size="16" font-weight="700" letter-spacing="1">PROCESAR · NUBE</text>
+    <text x="708" y="310" class="ink" font-size="24" font-weight="700">Earth Engine</text>
+    <text x="708" y="355" class="muted body"><tspan x="708" dy="0">Filtra y analiza</tspan><tspan x="708" dy="28">colecciones grandes.</tspan></text>
+    <line x1="708" y1="415" x2="902" y2="415" stroke="#e0e6ea" stroke-width="2"/>
+    <text x="708" y="449" class="ink small" font-weight="700">Produce</text>
+    <text x="708" y="479" class="muted small"><tspan x="708" dy="0">mapas, series</tspan><tspan x="708" dy="25">y estadísticas</tspan></text>
+
+    <rect x="1015" y="220" width="240" height="300" rx="18" class="card"/>
+    <rect x="1015" y="220" width="240" height="13" rx="7" fill="#6253a4"/>
+    <text x="1038" y="270" fill="#6253a4" font-size="16" font-weight="700" letter-spacing="1">INTEGRAR · API</text>
+    <text x="1038" y="310" class="ink" font-size="24" font-weight="700">Sentinel Hub</text>
+    <text x="1038" y="355" class="muted body"><tspan x="1038" dy="0">Recibe pedidos</tspan><tspan x="1038" dy="28">desde software.</tspan></text>
+    <line x1="1038" y1="415" x2="1232" y2="415" stroke="#e0e6ea" stroke-width="2"/>
+    <text x="1038" y="449" class="ink small" font-weight="700">Entrega</text>
+    <text x="1038" y="479" class="muted small"><tspan x="1038" dy="0">una imagen o un</tspan><tspan x="1038" dy="25">resultado procesado</tspan></text>
+  </g>
+
+  <rect x="135" y="558" width="1010" height="54" rx="14" fill="#ffffff" stroke="#d6dee4" stroke-width="2"/>
+  <text x="640" y="592" text-anchor="middle" class="sans ink" font-size="19" font-weight="600">Elegimos según la salida: buscar escenas · comparar · analizar series · integrar en una aplicación</text>
+</svg>
