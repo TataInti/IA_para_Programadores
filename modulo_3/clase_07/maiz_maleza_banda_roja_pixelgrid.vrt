@@ -1,0 +1,12 @@
+<VRTDataset rasterXSize="600" rasterYSize="600">
+  <GeoTransform>0, 1, 0, 600, 0, -1</GeoTransform>
+  <VRTRasterBand dataType="UInt16" band="1">
+    <ColorInterp>Gray</ColorInterp>
+    <SimpleSource>
+      <SourceFilename relativeToVRT="1">../../assets/geospatial/weedsgalore_muestra/images/2023-06-06_0625_R.png</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SrcRect xOff="0" yOff="0" xSize="600" ySize="600" />
+      <DstRect xOff="0" yOff="0" xSize="600" ySize="600" />
+    </SimpleSource>
+  </VRTRasterBand>
+</VRTDataset>
